@@ -1,13 +1,13 @@
 <template>
   <div>
-    <p>首页新闻</p>
-    <p>首页活动</p>
+    <p>飙升排行榜</p>
+    <p>新歌排行榜</p>
+    <p>热歌排行榜</p>
     <div class="nav_main">
-      <router-link to="/finda/recommend">推荐</router-link>
-      <router-link to="/finda/ranking">排行榜</router-link>
-      <router-link to="/finda/songlist">歌单</router-link>
+      <router-link to="/finda/ranking/recommen">推荐</router-link>
+      <router-link to="/finda/ranking/rankin">排行榜</router-link>
+      <router-link to="/finda/ranking/songlis">歌单</router-link>
     </div>
-
     <div style="1px solid red;">
       <router-view></router-view>
     </div>

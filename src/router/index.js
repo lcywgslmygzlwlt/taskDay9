@@ -26,7 +26,22 @@ const routes = [
     path: '/my',
     component: My,
     children: [
-      path
+      {
+        path: '/',
+        redirect: 'homepage'
+      },
+      {
+        path: 'homepage',
+        component: Homepage
+      },
+      {
+        path: 'homepage1',
+        component: Homepage1
+      },
+      {
+        path: 'homepage2',
+        component: Homepage2
+      }
     ]
   }
 ]

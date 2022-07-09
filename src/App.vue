@@ -1,32 +1,20 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div>
+    <div>
+      <router-link to="/home">首页</router-link>
+      <router-link to="/classification">分类</router-link>
+      <router-link to="/order">订单</router-link>
+      <router-link to="/my">我的</router-link>
+      <h3>显示路由切换的页面</h3>
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {};
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style></style>

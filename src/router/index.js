@@ -6,11 +6,22 @@ import Home from '@/views/Home.vue'
 import My from '@/views/My.vue'
 import NodeFent from '@/views/NodeFent.vue'
 
+// 二级
+import Hot from '@/views/send/热点.vue'
+import New from '@/views/send/最新.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
   { path: '/', redirect: '/home' },
-  { path: '/home', component: Home },
+  {
+    path: '/home',
+    component: Home,
+    children: [
+      { path: 'hot', component: Hot },
+      { path: 'new', component: New },
+    ],
+  },
   { path: '/my', component: My },
   { path: '/dd', component: Dd },
   { path: '/Fl', component: Fl },

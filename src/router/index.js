@@ -10,6 +10,10 @@ import NodeFent from '@/views/NodeFent.vue'
 import Hot from '@/views/send/热点.vue'
 import New from '@/views/send/最新.vue'
 
+// 三级
+import Bd from '@/views/send/local/Bd.vue'
+import Hw from '@/views/send/local/海外热点.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,7 +22,14 @@ const routes = [
     path: '/home',
     component: Home,
     children: [
-      { path: 'hot', component: Hot },
+      {
+        path: 'hot',
+        component: Hot,
+        children: [
+          { path: 'bd', component: Bd },
+          { path: 'hw', component: Hw },
+        ],
+      },
       { path: 'new', component: New },
     ],
   },

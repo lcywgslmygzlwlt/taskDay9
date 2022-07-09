@@ -7,6 +7,7 @@ import My from '@/views/my.vue'
 import Homepage from '@/components/homepage.vue'
 import Homepage1 from '@/components/homepage1.vue'
 import Homepage2 from '@/components/homepage2.vue'
+import San from '@/components/shan.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,7 +33,13 @@ const routes = [
       },
       {
         path: 'homepage',
-        component: Homepage
+        component: Homepage,
+        children: [
+          {
+            path: 'san',
+            component: San
+          }
+        ]
       },
       {
         path: 'homepage1',

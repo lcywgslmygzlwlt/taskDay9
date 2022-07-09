@@ -1,5 +1,7 @@
 <template>
-  <div>国内的体育</div>
+  <div>
+    <div>三级路由</div>
+  </div>
 </template>
 
 <script>
